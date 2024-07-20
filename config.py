@@ -1,0 +1,2 @@
+TOKEN='7276005531:AAE008dqRpByKs4V7g3oHrnG2NfiP0K_z8U'
+# DATABASE_NAME = 'appointments.db'
