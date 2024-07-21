@@ -1,2 +1,4 @@
-TOKEN='7276005531:AAE008dqRpByKs4V7g3oHrnG2NfiP0K_z8U'
+from os import getenv
+
+TOKEN = os.getenv('TOKEN')
 # DATABASE_NAME = 'appointments.db'
