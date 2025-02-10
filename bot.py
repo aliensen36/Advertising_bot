@@ -40,6 +40,24 @@ async def cmd_show_list(message: types.Message, mylist: list[int]):
 async def cmd_info(message: types.Message, started_at: str):
     await message.answer(f"Бот запущен {started_at}")
 
+from aiogram import F
+from aiogram.types import Message
+from aiogram.filters import Command
+from aiogram.enums import ParseMode
+
+# Если не указать фильтр F.text,
+# то хэндлер сработает даже на картинку с подписью /test
+@dp.message(F.text, Command("test"))
+async def any_message(message: Message):
+    await message.answer(
+        "Hello, <b>world</b>!",
+        parse_mode=ParseMode.HTML
+    )
+    await message.answer(
+        "Hello, *world*\!",
+        parse_mode=ParseMode.MARKDOWN_V2
+    )
+
 # Запуск процесса поллинга новых апдейтов
 async def main():
     dp["started_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
