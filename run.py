@@ -1,3 +1,5 @@
+# python run.py
+
 from aiogram import Bot, Dispatcher
 import asyncio
 from dotenv import load_dotenv
@@ -18,6 +20,7 @@ async def main():
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
+    print("https://t.me/Advert202407_bot")
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
