@@ -10,7 +10,7 @@ router = Router()
 @router.message(CommandStart())
 async def cmd_start(message: Message):
     await message.reply(f'Привет.\nТвой ID: {message.from_user.id}\nТвое имя: {message.from_user.full_name}',
-                        reply_markup=kb.main)
+                        reply_markup=kb.settings)
 
 @router.message(Command('help'))
 async def get_help(message: Message):
