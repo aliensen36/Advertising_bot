@@ -2,13 +2,24 @@
 
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 
+# start_keyboard = ReplyKeyboardMarkup(
+#     keyboard=[
+#         [KeyboardButton(text="🚀 Старт")]
+#     ],
+#     resize_keyboard=True
+# )
+
+
+
 main = ReplyKeyboardMarkup(keyboard=[
-    [KeyboardButton(text='Каталог')],
-    [KeyboardButton(text='Корзина'), KeyboardButton(text='Контакты')],
+    [KeyboardButton(text='🍽️  У камина'), KeyboardButton(text='📋️  Меню')],
+    [KeyboardButton(text='📅🍽️  Забронировать стол')],
+    [KeyboardButton(text='🚚️  Доставка'), KeyboardButton(text='📍️  Путь к нам')],
+[KeyboardButton(text='🎁️  Программа лояльности')],
 ],
     resize_keyboard=True,
     input_field_placeholder='Выберите действие')
 
-settings = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text='YouTube', url='https://youtube.com')]
-])
+# settings = InlineKeyboardMarkup(inline_keyboard=[
+#     [InlineKeyboardButton(text='YouTube', url='https://youtube.com')]
+# ])

@@ -4,13 +4,15 @@ from aiogram.filters import CommandStart, Command
 from aiogram.types import Message
 from aiogram import F, Router
 import app.keyboards as kb
+from aiogram import Bot, Dispatcher, types
 
 router = Router()
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.reply(f'Привет.\nТвой ID: {message.from_user.id}\nТвое имя: {message.from_user.full_name}',
-                        reply_markup=kb.settings)
+    await message.answer("Если кнопки скрыты, то нажми на иконку 🎛 в правом нижнем углу рядом с микрофоном 👌",
+                         reply_markup=kb.main)
+
 
 @router.message(Command('help'))
 async def get_help(message: Message):
